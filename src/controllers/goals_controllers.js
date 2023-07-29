@@ -94,6 +94,3 @@ const deleteAllGoals = async(request, response) => {
 
 
 module.exports = {getGoals, addGoal, updateGoal, deleteGoal, deleteAllGoals, addAmount}
-
-
-module.exports = {getGoals, addGoal, updateGoal, addAmount}
