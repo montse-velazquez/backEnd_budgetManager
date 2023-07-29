@@ -8,4 +8,6 @@ goalsRouter.post("/", addGoal)
 
 goalsRouter.put("/:id", updateGoal)
 
+goalsRouter.put("/addAmount/:goalId", addAmount)
+
 module.exports = goalsRouter

@@ -44,7 +44,21 @@ const updateGoal = async (request, response) => {
     // response.json({error: "id not found"})
 
 
-    }
+}
+
+//Add amount to savings as if will be adding to his/her goal
+const addAmount = (request, response) => {
+    let goalId = request.params.goalId;
+    let amount = request.body;
+
+    //Need to come back for porper DB action 
+    if (Number(goalId) === Goal[goalId]['id']) {
+        Goal[goalId]['initialAmount'] += amount['initialAmount'];
+            response.send({"new Amount": amount});
+    } else {
+            response.status(404).send("No Goal Found")
+        }
+}
 
 
 module.exports = {getGoals, addGoal, updateGoal}
