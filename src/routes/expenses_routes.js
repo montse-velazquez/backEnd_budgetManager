@@ -4,4 +4,6 @@ const {getExpenses, addExpense, cleanExpenses} = require('../controllers/expense
 
 expensesRouter.get("/", getExpenses);
 
+expensesRouter.post("/", addExpense);
+
 module.exports = expensesRouter
